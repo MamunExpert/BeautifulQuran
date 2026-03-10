@@ -77,7 +77,6 @@ header {
 }
 
 h1 { font-size: 2.5rem; color: #0070f3; }
-sidebar h2 { color: #000; }
 
 .controls button {
   background: #b8962e;
@@ -100,6 +99,10 @@ sidebar h2 { color: #000; }
   padding: 20px;
   overflow-y: auto;
   border-right: 1px solid #ccc;
+}
+
+.sidebar h2 {
+  color: black !important;
 }
 
 .sidebar ul { list-style: none; padding: 0; }
