@@ -24,12 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function loadPara(para) {
-    loading.style.display = 'block';
-    pdfViewer.src = `https://mozilla.github.io/pdf.js/web/viewer.html?file=/pdfs/para${para}.pdf`;
-    currentPara = para;
-    updateActiveLink();
-    setTimeout(() => { loading.style.display = 'none'; }, 800);
-  }
+  loading.style.display = 'block';
+  
+  const pdfUrl = `https://raw.githubusercontent.com/MamunExpert/BeautifulQuran/main/pdfs/para${para}.pdf`;
+  
+  pdfViewer.src = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(pdfUrl)}`;
+  
+  currentPara = para;
+  updateActiveLink();
+  setTimeout(() => { loading.style.display = 'none'; }, 800);
+}
 
   function updateActiveLink() {
     const links = paraList.querySelectorAll('a');
