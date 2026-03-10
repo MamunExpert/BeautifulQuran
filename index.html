@@ -3,34 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-      <title>Beautiful Quran Majeed - Tajweed Color Coded</title>
-  
+  <title>Beautiful Quran Majeed - Tajweed Color Coded</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
 </head>
-  
 <body>
+
   <div class="container">
     <header>
       <h1>কুরআন শরীফ (তাজবীদ, কালার কোডেড)</h1>
       <div class="controls">
-        <button id="night-mode">Night Mode</button>
-        <button id="fullscreen">Fullscreen</button>
+        <button id="night-mode">নাইট মোড</button>
+        <button id="fullscreen">ফুলস্ক্রিন</button>
       </div>
     </header>
-    
+
     <div class="main">
       <aside class="sidebar">
-        <h2>পারা লিস্ট:</h2>
-        <ul id="para-list">
-          <!-- 30 para list -->
-        </ul>
+        <h2>পারা নির্বাচন করুন</h2>
+        <ul id="para-list"></ul>
+
+	<!-- 30 para list -->
+
       </aside>
-      
-      <section class="viewer">
-        <div id="loading">Beautiful Quran is loading...</div>
+
+      <section class="viewer-section">
+        <div id="loading">পারা লোড হচ্ছে...</div>
         <iframe id="pdf-viewer" src="" allowfullscreen></iframe>
+
         <div class="para-nav">
           <button id="prev-para">পূর্ববর্তী পারা</button>
           <button id="next-para">পরবর্তী পারা</button>
@@ -38,7 +37,7 @@
       </section>
     </div>
   </div>
-  
+
   <script src="app.js"></script>
 </body>
 </html>
