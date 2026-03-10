@@ -10,16 +10,60 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Halder', 'Noto Serif Bengali', sans-serif;
-  background: url('https://thumbs.dreamstime.com/b/exquisite-arabic-islamic-sand-texture-background-seamless-pattern-elegant-design-projects-immerse-yourself-374257876.jpg') repeat;
-  background-size: cover;
-  color: #333;
+  background: #0a1425; /* ডার্ক বেস */
+  color: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
+
+/*  ইসলামিক প্যাটার্ন (pure CSS) */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    /* মেইন repeating geometric grid */
+    repeating-linear-gradient(45deg, transparent 0px, transparent 50px, rgba(212, 175, 55, 0.12) 50px, rgba(212, 175, 55, 0.12) 100px),
+    repeating-linear-gradient(-45deg, transparent 0px, transparent 60px, rgba(212, 175, 55, 0.08) 60px, rgba(212, 175, 55, 0.08) 120px),
+    
+    /* subtle radial highlights for depth */
+    radial-gradient(circle at 10% 15%, rgba(212, 175, 55, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 55%);
+  
+  background-size: 200px 200px, 240px 240px, 100% 100%, 100% 100%;
+  opacity: 0.75; 
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* হালকা ইসলামিক decoration icons (SVG inline, main page-এ) */
+.decor-icon {
+  position: absolute;
+  opacity: 0.12; /* খুব হালকা, বিরক্ত করবে না */
+  pointer-events: none;
+  z-index: -1;
+  fill: #d4af37;
+}
+
+#icon1 { top: 8%; left: 5%; width: 120px; height: 120px; }
+#icon2 { bottom: 10%; right: 6%; width: 140px; height: 140px; transform: rotate(180deg); }
+#icon3 { top: 15%; right: 8%; width: 90px; height: 90px; }
+#icon4 { bottom: 20%; left: 7%; width: 110px; height: 110px; transform: scaleX(-1); }
 
 h1, h2, .sidebar a, p, button {
-  font-family: 'Halder', serif;  /* যদি শিরোনাম/বাটনেও চান */
+  font-family: 'Halder', serif;
 }
 
-.container { max-width: 1200px; margin: 0 auto; }
+.container { 
+  max-width: 1400px; 
+  margin: 0 auto; 
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  position: relative;
+  z-index: 1;
+}
 
 header {
   background: rgba(255, 255, 255, 0.8);
@@ -89,15 +133,7 @@ h1 { font-size: 2.5rem; color: #0070f3; } /* গোল্ডেন কালা�
 
 .para-nav button { margin: 0 10px; padding: 8px 15px; background: #0070f3; color: white; border: none; border-radius: 5px; cursor: pointer; }
 
-/* নাইট মোড */
-.night-mode body { background: #121212 url('dark-islamic-pattern.jpg') repeat; color: #fff; } /* ডার্ক প্যাটার্ন URL অ্যাড করুন যদি চান */
-.night-mode header, .night-mode .sidebar { background: rgba(0, 0, 0, 0.8); }
-.night-mode .sidebar a { color: #fff; }
-.night-mode .sidebar a:hover { background: #333; }
-
-/* মোবাইল রেসপন্সিভ */
-@media (max-width: 768px) {
-  .main { flex-direction: column; }
-  .sidebar { width: 100%; height: auto; }
-  .viewer { height: 70vh; }
-}
+/* নাইট মোড অ্যাডজাস্ট */
+.night-mode body { background: #000814; }
+.night-mode body::before { opacity: 0.45; } /* ডার্ক মোডে প্যাটার্ন কমিয়ে */
+.night-mode .decor-icon { opacity: 0.08; }
