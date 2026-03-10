@@ -67,16 +67,26 @@ h1, h2, .sidebar a, p, button {
 
 header {
   height: 70px;
-  background: rgba(255, 255, 255, 0.8);
-  border-bottom:2px solid #d4af37;
+  background: radial-gradient(circle at top right, #d4af37 0%, #b8860b 40%, #0a1425 100%);
+  border-bottom: 2px solid #d4af37;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);   /* গোল্ডেন গ্লো shadow */
+  z-index: 10;
 }
 
-h1 { font-size: 2.5rem; color: #0070f3; }
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  background: linear-gradient(90deg, #d4af37, #f5d76e, #d4af37);  /* dark golden থেকে bright golden গ্র্যাডিয়েন্ট */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  /* টেক্সটকে gradient দিয়ে ফিল করা */
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(184, 134, 11, 0.5);  /* গোল্ডেন গ্লো */
+  letter-spacing: 1px;  /* অক্ষরের মাঝে স্পেস দিয়ে আরও প্রিমিয়াম লুক */
+}
 
 .controls button {
   background: #b8962e;
