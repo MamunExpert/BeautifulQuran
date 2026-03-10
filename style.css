@@ -68,6 +68,7 @@ h1, h2, .sidebar a, p, button {
 header {
   height: 70px;
   background: rgba(255, 255, 255, 0.8);
+  border-bottom:2px solid #d4af37;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
