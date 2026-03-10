@@ -1,10 +1,22 @@
+@font-face {
+  font-family: 'Halder';
+  src: url('/fonts/halder.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Naskh Arabic', sans-serif;
+  font-family: 'Halder', 'Noto Serif Bengali', sans-serif;
   background: url('https://thumbs.dreamstime.com/b/exquisite-arabic-islamic-sand-texture-background-seamless-pattern-elegant-design-projects-immerse-yourself-374257876.jpg') repeat;
   background-size: cover;
   color: #333;
+}
+
+h1, h2, .sidebar a, p, button {
+  font-family: 'Halder', serif;  /* যদি শিরোনাম/বাটনেও চান */
 }
 
 .container { max-width: 1200px; margin: 0 auto; }
