@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <title>Beautiful Quran Majeed - Tajweed Color Coded</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+  
+<body>
+  <div class="container">
+    <header>
+      <h1>Beautiful Quran Majeed - Tajweed Color Coded</h1>
+      <div class="controls">
+        <button id="night-mode">Night Mode</button>
+        <button id="fullscreen">Fullscreen</button>
+      </div>
+    </header>
+    
+    <div class="main">
+      <aside class="sidebar">
+        <h2>Juz list</h2>
+        <ul id="para-list">
+          <!-- 30 para list -->
+        </ul>
+      </aside>
+      
+      <section class="viewer">
+        <div id="loading">Beautiful Quran is loading...</div>
+        <iframe id="pdf-viewer" src="" allowfullscreen></iframe>
+        <div class="para-nav">
+          <button id="prev-para">Next Juz</button>
+          <button id="next-para">Previous Juz</button>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
