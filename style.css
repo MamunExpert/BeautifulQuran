@@ -39,8 +39,8 @@ body::before {
 
 /* হালকা ইসলামিক decoration icons (SVG inline, main page-এ) */
 .decor-icon {
-  position: absolute;
-  opacity: 0.12; /* খুব হালকা, বিরক্ত করবে না */
+  position: fixed;
+  opacity: 0.12;
   pointer-events: none;
   z-index: -1;
   fill: #d4af37;
@@ -66,6 +66,7 @@ h1, h2, .sidebar a, p, button {
 }
 
 header {
+  height: 70px;
   background: rgba(255, 255, 255, 0.8);
   padding: 0 20px;
   display: flex;
@@ -74,10 +75,10 @@ header {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-h1 { font-size: 2.5rem; color: #0070f3; } /* গোল্ডেন কালার */
+h1 { font-size: 2.5rem; color: #0070f3; }
 
 .controls button {
-  background: #0070f3;
+  background: #b8962e;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -86,7 +87,10 @@ h1 { font-size: 2.5rem; color: #0070f3; } /* গোল্ডেন কালা�
   cursor: pointer;
 }
 
-.main { display: flex; height: calc(100vh - 70px); }
+.main {
+  display: flex;
+  height: calc(100vh - 70px);
+}
 
 .sidebar {
   width: 180px;
@@ -112,9 +116,19 @@ h1 { font-size: 2.5rem; color: #0070f3; } /* গোল্ডেন কালা�
 
 .sidebar a:hover, .sidebar a.active { background: #d4af37; color: white; }
 
-.viewer { flex: 1; position: relative; }
+.viewer-section{
+  flex:1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
-#pdf-viewer { width: 100%; height: 100%; border: none; }
+#pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+}
 
 #loading {
   position: absolute;
@@ -134,6 +148,22 @@ h1 { font-size: 2.5rem; color: #0070f3; } /* গোল্ডেন কালা�
 .para-nav button { margin: 0 10px; padding: 8px 15px; background: #0070f3; color: white; border: none; border-radius: 5px; cursor: pointer; }
 
 /* নাইট মোড অ্যাডজাস্ট */
-.night-mode body { background: #000814; }
-.night-mode body::before { opacity: 0.45; } /* ডার্ক মোডে প্যাটার্ন কমিয়ে */
+body.night-mode { background: #000814; }
+body.night-mode::before { opacity: 0.45; } /* ডার্ক মোডে প্যাটার্ন কমিয়ে */
 .night-mode .decor-icon { opacity: 0.08; }
+
+
+
+
+@media (max-width: 768px){
+
+  .sidebar{
+    width:120px;
+    padding:10px;
+  }
+
+  h1{
+    font-size:1.5rem;
+  }
+
+}
