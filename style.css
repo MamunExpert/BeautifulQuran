@@ -77,7 +77,7 @@ header {
 }
 
 h1 { font-size: 2.5rem; color: #0070f3; }
-h1 { color: #000; }
+sidebar h2 { color: #000; }
 
 .controls button {
   background: #b8962e;
