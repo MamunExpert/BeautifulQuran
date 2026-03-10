@@ -23,7 +23,7 @@ h1, h2, .sidebar a, p, button {
 
 header {
   background: rgba(255, 255, 255, 0.8);
-  padding: 0 15px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
