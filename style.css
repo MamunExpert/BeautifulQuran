@@ -79,13 +79,14 @@ header {
 
 h1 {
   font-size: 2.5rem;
-  font-weight: bold;
   margin: 0;
-  background: linear-gradient(90deg, #d4af37, #f5d76e, #d4af37);  /* dark golden থেকে bright golden গ্র্যাডিয়েন্ট */
+  background: linear-gradient(90deg, #e8d5a3, #f0e68c, #e8d5a3);  /* light golden-silver */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;  /* টেক্সটকে gradient দিয়ে ফিল করা */
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 20px rgba(184, 134, 11, 0.5);  /* গোল্ডেন গ্লো */
-  letter-spacing: 1px;  /* অক্ষরের মাঝে স্পেস দিয়ে আরও প্রিমিয়াম লুক */
+  -webkit-text-fill-color: transparent;
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.6),
+    0 0 15px #d4af37,
+    0 0 25px #b8860b;
 }
 
 .controls button {
