@@ -157,7 +157,7 @@ h1 {
 #loading {
   position: absolute;
   font-size: 1rem;
-  color: #d4af37:
+  color: #d4af37;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
