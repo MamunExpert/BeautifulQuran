@@ -1,2 +1,2 @@
-# BeautifulQuran
-Tajweed_Quran_Majeed. Arabic Quran with beautiful color coded, tajweed rules, 13 lines
+### BeautifulQuran
+Tajweed Quran Majeed. Arabic Quran with beautiful color coded, tajweed rules, 16 lines
